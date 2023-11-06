@@ -15,7 +15,7 @@ for (let button of buttons) {
         button.addEventListener("click", (e) => delLastSign(e));
     } else if (button.innerText == "=") {
         button.addEventListener("click", (e) => equal());
-    } else if ("+-*/".includes(button.innerText)) {
+    } else if ("+-x/.".includes(button.innerText)) {
         button.addEventListener("click", (e) => handleSign(e))
     }
 }
@@ -45,7 +45,7 @@ handleSign = (e) => {
             if(reverse_input.substring(0, point_pos).includes(".") 
             || reverse_input.substring(0, point_pos).includes("+")
             || reverse_input.substring(0, point_pos).includes("-")
-            || reverse_input.substring(0, point_pos).includes("*")
+            || reverse_input.substring(0, point_pos).includes("x")
             || reverse_input.substring(0, point_pos).includes("/"));
             return;
         }
